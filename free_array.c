@@ -20,12 +20,12 @@ void	ft_error(t_game **v, char *err)
 	int	i;
 
 	i = 0;
-	while ((*v)->map[i])
+	while ((*v)->map.content[i])
 	{
-		free((*v)->map[i]);
+		free((*v)->map.content[i]);
 		i++;
 	}
-	free((*v)->map);
+	free((*v)->map.content);
 	if ((*v)->mlx)
 	{
 		if ((*v)->win)

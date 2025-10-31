@@ -7,6 +7,17 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+typedef struct s_map
+{
+	int		width;
+	int		height;
+	int 	player_pos_x;
+	int 	player_pos_y;
+	char 	tijah;
+	char	**content;
+	char	*walls;
+}			t_map;
+
 typedef struct s_game
 {
 	void	*mlx;
@@ -14,7 +25,7 @@ typedef struct s_game
 	void	*win;
 	int		win_w;
 	int		win_h;
-	char	**map;
+	t_map 	map;
 }			t_game;
 
 void		check_file_is_valid(char *file_line);

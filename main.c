@@ -5,7 +5,7 @@ static void	init_game(t_game *vars)
 	vars->mlx = NULL;
 	vars->img = NULL;
 	vars->win = NULL;
-	vars->map = NULL;
+	// vars->map->content = NULL;
 }
 
 static void	start_project(char **argv)
@@ -24,7 +24,7 @@ static void	start_project(char **argv)
 			write(2, "\033[1;31m🛑ERROR:\033[0m\nline is empty in map\n", 44);
 			exit(1);
 		}
-		vars.map = ft_split(map, '\n');
+		vars.map.content = ft_split(map, '\n');
 		free(map);
 		make_your_game(&vars);
 	}
