@@ -1,6 +1,6 @@
 #include "cub3d.h"
 
-static void	init_vars(t_vars *vars)
+static void	init_game(t_game *vars)
 {
 	vars->mlx = NULL;
 	vars->img = NULL;
@@ -11,9 +11,9 @@ static void	init_vars(t_vars *vars)
 static void	start_project(char **argv)
 {
 	char	*map;
-	t_vars	vars;
+	t_game	vars;
 
-	init_vars(&vars);
+	init_game(&vars);
 	check_file_is_valid(argv[1]);
 	map = get_map(argv);
 	if (map != NULL)

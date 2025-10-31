@@ -15,7 +15,7 @@ void	free_double_pointer(char **str)
 	str = NULL;
 }
 
-void	ft_error(t_vars **v, char *err)
+void	ft_error(t_game **v, char *err)
 {
 	int	i;
 
